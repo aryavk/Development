@@ -1,0 +1,9 @@
+<decorators defaultdir="/resources/decorator">
+    <excludes>
+    	<pattern>/widgets/*</pattern>    
+    </excludes>
+    <decorator name="none" page="none.jsp"/>
+    <decorator name="template" page="template.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+</decorators>

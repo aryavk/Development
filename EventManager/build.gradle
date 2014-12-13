@@ -1,0 +1,41 @@
+apply plugin: 'java' 
+apply plugin: 'war' 
+apply plugin: 'jetty' 
+apply plugin: 'eclipse-wtp'
+
+sourceSets.main.java.srcDirs = ['src']
+webAppDirName = 'WebContent'
+
+repositories {
+  mavenLocal()
+    mavenCentral()
+    maven { url "http://repo.spring.io/libs-release" }
+}
+
+dependencies {
+    compile 'org.springframework:spring-orm:4.0.6.RELEASE'
+    compile 'commons-dbcp:commons-dbcp:1.4'
+    compile 'mysql:mysql-connector-java:5.1.32'  
+    providedCompile 'javax.servlet:servlet-api:2.5'
+    compile 'opensymphony:sitemesh:2.4.2'
+    compile 'org.springframework:spring-webmvc:4.0.6.RELEASE'
+    compile 'org.springframework:spring-core:4.0.6.RELEASE'
+    compile 'org.springframework:spring-aop:4.0.6.RELEASE'       
+    compile 'org.springframework:spring-aspects:4.0.6.RELEASE'       
+    compile 'org.springframework:spring-web:4.0.6.RELEASE'       
+    compile 'org.springframework:spring-beans:4.0.6.RELEASE'  
+    compile 'org.springframework:spring-context:4.0.6.RELEASE'  
+    compile 'org.springframework:spring-tx:4.0.6.RELEASE'  
+    compile 'org.springframework.security:spring-security-web:3.2.5.RELEASE'
+    compile 'org.springframework.security:spring-security-core:3.2.5.RELEASE'
+    compile 'org.springframework.security:spring-security-config:3.2.5.RELEASE'
+    compile 'org.springframework.security:spring-security-taglibs:3.2.5.RELEASE'
+    compile 'org.hibernate:hibernate-core:4.3.6.Final'  
+    compile 'org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final'    
+    compile 'javax.persistence:persistence-api:1.0'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.4.1'
+    compile "org.springframework.plugin:spring-plugin-core:1.1.0.RELEASE"
+    compile 'com.jayway.jsonpath:json-path:0.9.1'
+    compile "javax.servlet:com.springsource.javax.servlet.jsp.jstl:1.1.2";
+    runtime 'javax.servlet:jstl:1.1.2'
+}
