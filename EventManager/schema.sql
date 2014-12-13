@@ -62,10 +62,8 @@ CREATE TABLE user_role
   CONSTRAINT fk_user_role_user FOREIGN KEY (user_id) REFERENCES user (id)
 )engine=INNODB charset=UTF8;
  
-INSERT INTO user(username, password, enabled) VALUES ('arya', MD5('Aryavali1'),1);
-INSERT INTO user(username, password, enabled) VALUES ('joanne', MD5('ILov3YoU'),1);
-INSERT INTO user(username, password, enabled) VALUES ('cathy', MD5('Cathy1'),1);
- 
+INSERT INTO user(username, password, enabled) VALUES ('admin', MD5('admin'),1);
+
 INSERT INTO user_role(user_id, user_role) SELECT id, 'ROLE_ADMIN' FROM user;
 
 INSERT INTO industry (name) VALUES
